@@ -62,4 +62,13 @@ class LivreManager extends Model
 
         header('Location: '.URL.'/livres');
     }
+
+    public function modifierLivreBD($titre,$nbPages,$image,$id)
+    {
+        $stmt = self::getBdd()->prepare('UPDATE livre SET titre = ?, nbPages = ?, image = ? WHERE id ='.$id);
+
+        $stmt->execute(array($titre,$nbPages,$image));
+
+        header('Location: '.URL.'/livres');
+    }
 }

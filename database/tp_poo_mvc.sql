@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 08 juil. 2022 à 11:34
+-- Généré le : ven. 08 juil. 2022 à 14:27
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 8.1.2
 
@@ -46,7 +46,7 @@ INSERT INTO `livre` (`id`, `titre`, `nbPages`, `image`) VALUES
 (5, 'Complete Node.js', 430, 'public/images/nodejs.jpg'),
 (6, 'Apprendre React.js de la base à la maitrise', 895, 'public/images/reactjs.jpg'),
 (7, 'DELETE THIS BOOK', 9999, 'public/images/deleteBook.jpg'),
-(29, 'Symfony 5 : THE FAST TRACK', 526, 'public/images/symfony.jpg');
+(29, 'Symfony 5 : THE FAST TRACK', 526, 'public/images/symfonyBook.jpg');
 
 --
 -- Index pour les tables déchargées

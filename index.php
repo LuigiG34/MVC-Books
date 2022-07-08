@@ -44,6 +44,9 @@ try {
                             $manager->ajoutLivreBD($_POST['titre'],$_POST['pages'], $img);
                             break;
                         case 'modifValider':
+                            $newImg = $a->modifierLivreValider(intval($url[2]));
+                            $manager = new LivreManager();
+                            $manager->modifierLivreBD($_POST['newTitre'],$_POST['newPages'],$newImg,$url[2]);
                             break;
                         default:
                             http_response_code(404);

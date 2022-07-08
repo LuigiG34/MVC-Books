@@ -44,6 +44,25 @@ class LivreController
             unlink($imgDel);
         }
     }
+
+    public function modifierLivreValider($id)
+    {
+        $result = $this->livreManager->getLivreById($id);
+        
+        $dir = "public/images/";
+        $file = $_FILES['newImage'];
+
+        if($file['error'] === 0){
+            if(file_exists($result[0]["image"])){
+                unlink($result[0]["image"]);
+            }
+            $actualImg = GlobalController::ajoutImage($file,$dir);
+            return $actualImg;
+        }else{
+            $actualImg = $result[0]["image"];
+            return $actualImg;
+        }
+    }
 }
 
 ?>
